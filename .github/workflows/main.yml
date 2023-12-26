@@ -24,6 +24,7 @@ jobs:
         uses: aws-actions/configure-aws-credentials@v1
         with:
           role-to-assume: arn:aws:iam::553323463064:role/github-actions-role
+          aws-region: ${{ secrets.AWS_REGION }}
           
       - name: Build code
         run: |
